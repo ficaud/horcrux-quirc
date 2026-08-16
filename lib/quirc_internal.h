@@ -31,8 +31,15 @@
 #ifndef QUIRC_MAX_REGIONS
 #define QUIRC_MAX_REGIONS	254
 #endif
+/* Memory-constrained targets (e.g. the classic ESP32 firmware) may define
+ * smaller limits at build time. The Horcrux firmware decodes a single QR
+ * share per image, so 8 capstones / 16 grids is more than enough. */
+#ifndef QUIRC_MAX_CAPSTONES
 #define QUIRC_MAX_CAPSTONES	32
+#endif
+#ifndef QUIRC_MAX_GRIDS
 #define QUIRC_MAX_GRIDS		(QUIRC_MAX_CAPSTONES * 2)
+#endif
 
 #define QUIRC_PERSPECTIVE_PARAMS	8
 
