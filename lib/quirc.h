@@ -83,7 +83,7 @@ const char *quirc_strerror(quirc_decode_error_t err);
 #define QUIRC_MAX_BITMAP	(((QUIRC_MAX_GRID_SIZE * QUIRC_MAX_GRID_SIZE) + 7) / 8)
 /* The default is the upstream limit. Memory-constrained targets (e.g. the
  * classic ESP32 firmware) may define a smaller value at build time; the
- * Horcrux QR shares never exceed a few hundred bytes. */
+ * Relic Core QR shares never exceed a few hundred bytes. */
 #ifndef QUIRC_MAX_PAYLOAD
 #define QUIRC_MAX_PAYLOAD	8896
 #endif
